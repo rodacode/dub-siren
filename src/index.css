@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.syren__container{
+  border: 1px solid #15DD6A;
+  border-radius: 5px;
+  max-width:500px;
+  margin:20px auto;
+}
+.dial__container{
+  display: flex;
+  flex-direction: row;
+}
+.dial__slot {
+  margin: 0 20px;
+  max-width: 60px;
+}
+
+.trigger__slot{
+  margin: 20px;
+}
+.trigger{
+  width: 30px;
+  height: 30px;
+  background-color: #15DD6A;
+  border-radius: 5px;
+  margin: 0 auto;
+}
