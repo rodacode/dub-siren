@@ -18,8 +18,13 @@ export default class Syren extends Component {
             mod: 0,
             mod_rate: 0,
         };
+        //SEt intial volume
+        this.osc.volume.value = -10;
         // This binding is necessary to make `this` work in the callback
         this.trigger = this.trigger.bind(this);
+        this.setVolume = this.setVolume.bind(this);
+        this.setTone = this.setTone.bind(this);
+
     }
 
     trigger() {
@@ -39,6 +44,12 @@ export default class Syren extends Component {
     stopSound() {
         this.osc.stop();
     }
+    setVolume(value) {
+        return  this.osc.volume.value = value;
+    }
+    setTone(value) {
+        return  this.osc.frequency.value = value;
+    }
 
     render() {
         return (
@@ -51,19 +62,19 @@ export default class Syren extends Component {
                         <p>TRIGGER</p>
                     </div>
                     <div className="dial__slot volumen">
-                        <Dial />
+                        <Dial interaction={"radial"} onChange={this.setVolume} value={-100} min={-100} max={1}/>
                         <p>VOLUME</p>
                     </div>
                     <div className="dial__slot tone">
-                        <Dial />
+                        <Dial interaction={"radial"} onChange={this.setTone} value={200} min={-100} max={880}/>
                         <p>TONE</p>
                     </div>
                     <div className="dial__slot mod">
-                        <Dial />
+                        <Dial interaction={"radial"} />
                         <p>MOD</p>
                     </div>
                     <div className="dial__slot rate">
-                        <Dial />
+                        <Dial interaction={"radial"} />
                         <p>RATE</p>
                     </div>
                 </div>
