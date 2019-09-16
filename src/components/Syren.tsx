@@ -2,19 +2,6 @@ import React, { Component } from 'react';
 import { Dial } from 'react-nexusui';
 import Tone from 'tone';
 
-//import { Siren } from '../engines/siren';
-
-interface State {
-    volume: number;
-    tone: number;
-    mod: number;
-    mod_rate: number;
-    playing: Boolean;
-}
-interface SirenProps {
-
-}
-
 export default class Syren extends Component {
     osc: any;
     ctx: AudioContext;
