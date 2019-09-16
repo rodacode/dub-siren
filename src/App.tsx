@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Syren from './Syren';
+import Syren from './components/Syren';
 
 
 
