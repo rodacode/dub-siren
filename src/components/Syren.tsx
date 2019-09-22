@@ -2,27 +2,34 @@ import React, { Component } from 'react';
 import { Dial } from 'react-nexusui';
 import Tone from 'tone';
 
-export default class Syren extends Component {
+//Import Siren interface
+import { SirenModel } from '../models/SirenModel';
+
+// Set the model of the state we need so Typescript intellisense works
+export interface State {
+    volume: number;
+    tone: number;
+    mod: number;
+    isPlaying: Boolean;
+}
+export default class Syren extends Component<SirenModel, State> {
     osc: any;
-    mod:any;
+    lfo:any;
     ctx: AudioContext;
-    playing: Boolean = false;
 
     constructor(props) {
         super(props);
         // eslint-disable-next-line
         this.ctx = new AudioContext;
         this.osc = new Tone.Oscillator(440, 'sine').toMaster();
-        this.mod = new Tone.LFO(0, 0, 400);
-        this.mod.connect(this.osc.frequency).start();
+        this.lfo = new Tone.LFO(0, 0, 400);
+        this.lfo.connect(this.osc.frequency).start();
         this.state = {
             volume: 1,
             tone: 120,
             mod: 0,
-            mod_rate: 0,
+            isPlaying: false
         };
-        //SEt intial volume
-        this.osc.volume.value = -10;
         // This binding is necessary to make `this` work in the callback
         this.trigger = this.trigger.bind(this);
         this.setVolume = this.setVolume.bind(this);
@@ -32,14 +39,13 @@ export default class Syren extends Component {
     }
 
     trigger() {
-        console.log('sound!!!');
-        if (this.playing === false) {
+        if (this.state.isPlaying === false) {
             this.playSound();
         }
         else {
             this.stopSound();
         }
-        this.playing = !this.playing;
+        this.setState( { isPlaying : !this.state.isPlaying })
     }
 
     playSound() {
@@ -48,14 +54,17 @@ export default class Syren extends Component {
     stopSound() {
         this.osc.stop();
     }
-    setVolume(value) {
-        return  this.osc.volume.value = value;
+    setVolume(v) {
+        this.setState( { volume : v })
+        return  this.osc.volume.value = v;
     }
-    setTone(value) {
-        return  this.osc.frequency.value = value;
+    setTone(v) {
+        this.setState( { tone : v })
+        return  this.osc.frequency.value = v;
     }
-    setMod(value) {
-        return  this.mod.frequency.value = value;
+    setMod(v) {
+        this.setState( { mod : v })
+        return  this.lfo.frequency.value = v;
     }
 
     render() {
@@ -69,15 +78,15 @@ export default class Syren extends Component {
                         <p>TRIGGER</p>
                     </div>
                     <div className="dial__slot volumen">
-                        <Dial interaction={"radial"} onChange={this.setVolume} value={-100} min={-100} max={1}/>
+                        <Dial interaction={"radial"} onChange={this.setVolume} value={this.state.volume} min={-100} max={1}/>
                         <p>VOLUME</p>
                     </div>
                     <div className="dial__slot tone">
-                        <Dial interaction={"radial"} onChange={this.setTone} value={200} min={0} max={880}/>
+                        <Dial interaction={"radial"} onChange={this.setTone} value={this.state.tone} min={0} max={880}/>
                         <p>TONE</p>
                     </div>
                     <div className="dial__slot mod">
-                        <Dial interaction={"radial"} onChange={this.setMod} value={0} min={0} max={10}/>
+                        <Dial interaction={"radial"} onChange={this.setMod} value={this.state.mod} min={0} max={10}/>
                         <p>MOD</p>
                     </div>
                 </div>
