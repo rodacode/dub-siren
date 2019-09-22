@@ -13,7 +13,7 @@ export default class Syren extends Component {
         // eslint-disable-next-line
         this.ctx = new AudioContext;
         this.osc = new Tone.Oscillator(440, 'sine').toMaster();
-        this.mod = new Tone.LFO(0, 0, 4000);
+        this.mod = new Tone.LFO(0, 0, 400);
         this.mod.connect(this.osc.frequency).start();
         this.state = {
             volume: 1,
@@ -73,7 +73,7 @@ export default class Syren extends Component {
                         <p>VOLUME</p>
                     </div>
                     <div className="dial__slot tone">
-                        <Dial interaction={"radial"} onChange={this.setTone} value={200} min={-100} max={880}/>
+                        <Dial interaction={"radial"} onChange={this.setTone} value={200} min={0} max={880}/>
                         <p>TONE</p>
                     </div>
                     <div className="dial__slot mod">
