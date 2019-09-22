@@ -39,7 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://nicohardmeier.github.io/siren",
+  "homepage": "https://nicohardmeier.github.io/dub-siren",
   "devDependencies": {
     "gh-pages": "^2.1.1"
   }
