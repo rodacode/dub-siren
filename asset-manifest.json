@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dub-siren/static/css/main.d256f82a.chunk.css",
+    "main.css": "/dub-siren/static/css/main.5858a55c.chunk.css",
     "main.js": "/dub-siren/static/js/main.4795dab3.chunk.js",
     "main.js.map": "/dub-siren/static/js/main.4795dab3.chunk.js.map",
     "runtime~main.js": "/dub-siren/static/js/runtime~main.96c92c6f.js",
@@ -8,8 +8,8 @@
     "static/js/2.c9119ef4.chunk.js": "/dub-siren/static/js/2.c9119ef4.chunk.js",
     "static/js/2.c9119ef4.chunk.js.map": "/dub-siren/static/js/2.c9119ef4.chunk.js.map",
     "index.html": "/dub-siren/index.html",
-    "precache-manifest.54f6b33f4cedbd5177c546e786665a7b.js": "/dub-siren/precache-manifest.54f6b33f4cedbd5177c546e786665a7b.js",
+    "precache-manifest.1a5beb34fc33e2cd421eb1c14b2d68f1.js": "/dub-siren/precache-manifest.1a5beb34fc33e2cd421eb1c14b2d68f1.js",
     "service-worker.js": "/dub-siren/service-worker.js",
-    "static/css/main.d256f82a.chunk.css.map": "/dub-siren/static/css/main.d256f82a.chunk.css.map"
+    "static/css/main.5858a55c.chunk.css.map": "/dub-siren/static/css/main.5858a55c.chunk.css.map"
   }
 }

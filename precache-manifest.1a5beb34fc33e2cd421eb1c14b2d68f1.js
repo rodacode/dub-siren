@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "05dc67c1482352806198fe9b34b8884b",
+    "revision": "e9cc7b4d991d17dda36edd544a768dba",
     "url": "/dub-siren/index.html"
   },
   {
-    "revision": "6d6a06b4a4d8d0da85bb",
-    "url": "/dub-siren/static/css/main.d256f82a.chunk.css"
+    "revision": "31cd6ccc851b05c0f7dd",
+    "url": "/dub-siren/static/css/main.5858a55c.chunk.css"
   },
   {
     "revision": "e75ec15c8476b4b6cc07",
     "url": "/dub-siren/static/js/2.c9119ef4.chunk.js"
   },
   {
-    "revision": "6d6a06b4a4d8d0da85bb",
+    "revision": "31cd6ccc851b05c0f7dd",
     "url": "/dub-siren/static/js/main.4795dab3.chunk.js"
   },
   {
