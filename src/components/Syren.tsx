@@ -70,24 +70,24 @@ export default class Syren extends Component<SirenModel, State> {
     render() {
         return (
             <div className="syren__container">
-                <h1>Dub Siren</h1>
+                <h1 className="title">DUB SIREN</h1>
                 <div className="dial__container">
                     <div className="dial__slot trigger__slot">
                         <div onClick={this.trigger} className="trigger">
                         </div>
-                        <p>TRIGGER</p>
+                        <p className="label">TRIGGER</p>
                     </div>
                     <div className="dial__slot volumen">
                         <Dial interaction={"radial"} onChange={this.setVolume} value={this.state.volume} min={-100} max={1}/>
-                        <p>VOLUME</p>
+                        <p className="label">VOLUME</p>
                     </div>
                     <div className="dial__slot tone">
                         <Dial interaction={"radial"} onChange={this.setTone} value={this.state.tone} min={0} max={880}/>
-                        <p>TONE</p>
+                        <p className="label">TONE</p>
                     </div>
                     <div className="dial__slot mod">
                         <Dial interaction={"radial"} onChange={this.setMod} value={this.state.mod} min={0} max={10}/>
-                        <p>MOD</p>
+                        <p className="label">MOD</p>
                     </div>
                 </div>
             </div>
