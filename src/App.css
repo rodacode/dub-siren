@@ -8,3 +8,10 @@ body {
 .label{
   text-align: center;
 }
+.syren__container {
+  max-width: 217px;
+}
+.dial__container{
+  flex-wrap: wrap;
+
+}
