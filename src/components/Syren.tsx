@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dial } from 'react-nexusui';
+import { Button, Dial } from 'react-nexusui';
 import Tone from 'tone';
 
 //Import Siren interface
@@ -14,7 +14,7 @@ export interface State {
 }
 export default class Syren extends Component<SirenModel, State> {
     osc: any;
-    lfo:any;
+    lfo: any;
     ctx: AudioContext;
 
     constructor(props) {
@@ -39,13 +39,13 @@ export default class Syren extends Component<SirenModel, State> {
     }
 
     trigger() {
-        if (this.state.isPlaying === false) {
-            this.playSound();
-        }
-        else {
+        if (this.state.isPlaying) {
             this.stopSound();
         }
-        this.setState( { isPlaying : !this.state.isPlaying })
+        else {
+            this.playSound();
+        }
+        this.setState({ isPlaying: !this.state.isPlaying })
     }
 
     playSound() {
@@ -55,16 +55,16 @@ export default class Syren extends Component<SirenModel, State> {
         this.osc.stop();
     }
     setVolume(v) {
-        this.setState( { volume : v })
-        return  this.osc.volume.value = v;
+        this.setState({ volume: v })
+        return this.osc.volume.value = v;
     }
     setTone(v) {
-        this.setState( { tone : v })
-        return  this.osc.frequency.value = v;
+        this.setState({ tone: v })
+        return this.osc.frequency.value = v;
     }
     setMod(v) {
-        this.setState( { mod : v })
-        return  this.lfo.frequency.value = v;
+        this.setState({ mod: v })
+        return this.lfo.frequency.value = v;
     }
 
     render() {
@@ -73,20 +73,21 @@ export default class Syren extends Component<SirenModel, State> {
                 <h1 className="title">DUB SIREN</h1>
                 <div className="dial__container">
                     <div className="dial__slot trigger__slot">
-                        <div onClick={this.trigger} className="trigger">
+                        <div className="button__container">
+                            <Button size={[100, 30]} mode={"button"} onChange={this.trigger} />
                         </div>
                         <p className="label">TRIGGER</p>
                     </div>
                     <div className="dial__slot volumen">
-                        <Dial interaction={"radial"} onChange={this.setVolume} value={this.state.volume} min={-100} max={1}/>
+                        <Dial interaction={"radial"} onChange={this.setVolume} value={this.state.volume} min={-100} max={1} />
                         <p className="label">VOLUME</p>
                     </div>
                     <div className="dial__slot tone">
-                        <Dial interaction={"radial"} onChange={this.setTone} value={this.state.tone} min={0} max={880}/>
+                        <Dial interaction={"radial"} onChange={this.setTone} value={this.state.tone} min={0} max={880} />
                         <p className="label">TONE</p>
                     </div>
                     <div className="dial__slot mod">
-                        <Dial interaction={"radial"} onChange={this.setMod} value={this.state.mod} min={0} max={10}/>
+                        <Dial interaction={"radial"} onChange={this.setMod} value={this.state.mod} min={0} max={10} />
                         <p className="label">MOD</p>
                     </div>
                 </div>

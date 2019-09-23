@@ -12,8 +12,8 @@ code {
     monospace;
 }
 .syren__container{
-  border: 1px solid #15DD6A;
-  border-radius: 5px;
+  border: 4px solid #22BBBB;
+  border-radius: 9px;
   max-width:500px;
   margin:20px auto;
 }
@@ -29,10 +29,7 @@ code {
 .trigger__slot{
   margin: 20px;
 }
-.trigger{
-  width: 30px;
-  height: 30px;
-  background-color: #15DD6A;
-  border-radius: 5px;
-  margin: 0 auto;
+.button__container {
+  margin-left: -15px;
+  margin-bottom: 41px; 
 }
