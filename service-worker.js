@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dub-siren/precache-manifest.1a5beb34fc33e2cd421eb1c14b2d68f1.js"
+  "/dub-siren/precache-manifest.cd75f757c7306331880551be3d5aa185.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dub-siren/static/css/main.5858a55c.chunk.css",
-    "main.js": "/dub-siren/static/js/main.4795dab3.chunk.js",
-    "main.js.map": "/dub-siren/static/js/main.4795dab3.chunk.js.map",
+    "main.css": "/dub-siren/static/css/main.eacef265.chunk.css",
+    "main.js": "/dub-siren/static/js/main.30482e09.chunk.js",
+    "main.js.map": "/dub-siren/static/js/main.30482e09.chunk.js.map",
     "runtime~main.js": "/dub-siren/static/js/runtime~main.96c92c6f.js",
     "runtime~main.js.map": "/dub-siren/static/js/runtime~main.96c92c6f.js.map",
-    "static/js/2.c9119ef4.chunk.js": "/dub-siren/static/js/2.c9119ef4.chunk.js",
-    "static/js/2.c9119ef4.chunk.js.map": "/dub-siren/static/js/2.c9119ef4.chunk.js.map",
+    "static/js/2.bd745a6a.chunk.js": "/dub-siren/static/js/2.bd745a6a.chunk.js",
+    "static/js/2.bd745a6a.chunk.js.map": "/dub-siren/static/js/2.bd745a6a.chunk.js.map",
     "index.html": "/dub-siren/index.html",
-    "precache-manifest.1a5beb34fc33e2cd421eb1c14b2d68f1.js": "/dub-siren/precache-manifest.1a5beb34fc33e2cd421eb1c14b2d68f1.js",
+    "precache-manifest.cd75f757c7306331880551be3d5aa185.js": "/dub-siren/precache-manifest.cd75f757c7306331880551be3d5aa185.js",
     "service-worker.js": "/dub-siren/service-worker.js",
-    "static/css/main.5858a55c.chunk.css.map": "/dub-siren/static/css/main.5858a55c.chunk.css.map"
+    "static/css/main.eacef265.chunk.css.map": "/dub-siren/static/css/main.eacef265.chunk.css.map"
   }
 }
